@@ -55,7 +55,7 @@ const BLOG = {
   CUSTOM_MENU: process.env.NEXT_PUBLIC_CUSTOM_MENU || true, // 支持Menu类型的菜单，替代了3.12版本前的Page类型
 
   // 文章列表相关设置
-  CAN_COPY: process.env.NEXT_PUBLIC_CAN_COPY || true, // 是否允许复制页面内容 默认允许，如果设置为false、则全栈禁止复制内容。
+  CAN_COPY: process.env.NEXT_PUBLIC_CAN_COPY || false, // 是否允许复制页面内容 默认允许，如果设置为false、则全栈禁止复制内容。
 
   // 侧栏布局 是否反转(左变右,右变左) 已支持主题: hexo next medium fukasawa example
   LAYOUT_SIDEBAR_REVERSE:
@@ -66,6 +66,13 @@ const BLOG = {
     process.env.NEXT_PUBLIC_GREETING_WORDS ||
     'Hi，我是一个学习者, Hi，我是一个打工人（为自己打工）,Hi，我是一个干饭人,欢迎来到我的博客🎉',
 
+// 改行用作 隐藏 Powered by 信息
+  POWERED_BY: false, // 设置为 false 即可隐藏页脚的 "Powered by NotionNext"
+// 1. 设置您的品牌名、链接和起始年份
+  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || '三娃爸分享', // 例如：'三娃爸的AI工坊'
+  BIO: process.env.NEXT_PUBLIC_BIO || '分享知识，传递价值',
+  LINK: process.env.NEXT_PUBLIC_LINK || 'https://www.focusonv2ex.com', // 您的品牌链接
+  
   // uuid重定向至 slug
   UUID_REDIRECT: process.env.UUID_REDIRECT || false
 }
