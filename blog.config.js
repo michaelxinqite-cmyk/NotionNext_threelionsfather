@@ -14,14 +14,16 @@ const BLOG = {
   APPEARANCE: process.env.NEXT_PUBLIC_APPEARANCE || 'light', // ['light', 'dark', 'auto'], // light 日间模式 ， dark夜间模式， auto根据时间和主题自动夜间模式
   APPEARANCE_DARK_TIME: process.env.NEXT_PUBLIC_APPEARANCE_DARK_TIME || [20, 6], // 夜间模式起至时间，false时关闭根据时间自动切换夜间模式
 
-  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'threelionsfather', // 您的昵称 例如 三娃爸
-  BIO: process.env.NEXT_PUBLIC_BIO || '三个娃的老爸！一个普通的干饭人🍚', // 作者简介
+  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || '三娃爸分享', // 您的昵称 例如 三娃爸
+  BIO: process.env.NEXT_PUBLIC_BIO || '一个普通的干饭人🍚，分享知识，传递价值', // 作者简介
   LINK: process.env.NEXT_PUBLIC_LINK || 'https://www.focusonv2ex.com', // 网站地址
   KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Notion, 博客, 三娃爸分享, AI, 人工智能, Deepseek, 字节跳动, 火山大模型, 油管, 混元大模型, openai, Claude, Google, Gemini, Google AI Studio, 网络赚钱, 失业, 副业, 一人公司, 创业, 再就业, AI大模型, 开源大模型', // 网站关键词 英文逗号隔开
   BLOG_FAVICON: process.env.NEXT_PUBLIC_FAVICON || '/favicon.ico', // blog favicon 配置, 默认使用 /public/favicon.ico，支持在线图片，如 https://img.imesong.com/favicon.png
   BEI_AN: process.env.NEXT_PUBLIC_BEI_AN || '', // 备案号 闽ICP备XXXXXX
   BEI_AN_LINK: process.env.NEXT_PUBLIC_BEI_AN_LINK || 'https://beian.miit.gov.cn/', // 备案查询链接，如果用了萌备等备案请在这里填写
   BEI_AN_GONGAN: process.env.NEXT_PUBLIC_BEI_AN_GONGAN || '', // 公安备案号，例如 '浙公网安备3xxxxxxxx8号'
+  COPYRIGHT_TEXT: '© ${SINCE} ${AUTHOR}', // 您可以修改这里的格式，例如 'Copyright © ${SINCE} By ${AUTHOR}'
+  FOOTER_APPEARANCE_TEXT: process.env.NEXT_PUBLIC_FOOTER_APPEARANCE_TEXT || '保留所有权利', // 例如'All Rights Reserved.'
 
   // RSS订阅
   ENABLE_RSS: process.env.NEXT_PUBLIC_ENABLE_RSS || true, // 是否开启RSS订阅功能
@@ -66,12 +68,6 @@ const BLOG = {
     process.env.NEXT_PUBLIC_GREETING_WORDS ||
     'Hi，我是一个学习者, Hi，我是一个打工人（为自己打工）,Hi，我是一个干饭人,欢迎来到我的博客🎉',
 
-// 改行用作 隐藏 Powered by 信息
-  POWERED_BY: false, // 设置为 false 即可隐藏页脚的 "Powered by NotionNext"
-// 1. 设置您的品牌名、链接和起始年份
-  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || '三娃爸分享', // 例如：'三娃爸的AI工坊'
-  BIO: process.env.NEXT_PUBLIC_BIO || '分享知识，传递价值',
-  LINK: process.env.NEXT_PUBLIC_LINK || 'https://www.focusonv2ex.com', // 您的品牌链接
   
   // uuid重定向至 slug
   UUID_REDIRECT: process.env.UUID_REDIRECT || false
